@@ -8,6 +8,15 @@
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
+<AuthorizeView>
+    <Authorized>
+        The user is authorized
+    </Authorized>
+    <NotAuthorized>
+        The User is not authorized
+    </NotAuthorized>
+</AuthorizeView>
+
 @code {
     private int currentCount = 0;
 
