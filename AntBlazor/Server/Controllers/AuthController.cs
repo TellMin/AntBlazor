@@ -13,6 +13,19 @@ namespace AntBlazor.Server.Controllers
             return Ok();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginDto login)
+        {
+            // TODO: add DbContext and use it
+            var dummy = Task.Run(() => Console.WriteLine("dummy"));
+
+            if(login == null || !login.UserName.Equals("tellmin"))
+            {
+                return BadRequest();
+            }
+            return Ok(login);
+        }
+
         [HttpGet]
         public CurrentUser CurentUserInfo()
         {
