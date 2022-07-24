@@ -1,4 +1,4 @@
-using AntBlazor.Shared;
+using AntBlazor.Shared.DTO;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AntBlazor.Server.Controllers

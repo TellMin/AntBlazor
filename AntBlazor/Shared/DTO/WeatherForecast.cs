@@ -1,4 +1,4 @@
-namespace AntBlazor.Shared
+namespace AntBlazor.Shared.DTO
 {
     public class WeatherForecast
     {

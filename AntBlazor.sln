@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntBlazor.Server", "AntBlazor\Server\AntBlazor.Server.csproj", "{77319C47-2C17-4E07-8C27-AF8A5D1D7060}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntBlazor.Server", "AntBlazor\Server\AntBlazor.Server.csproj", "{77319C47-2C17-4E07-8C27-AF8A5D1D7060}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntBlazor.Client", "AntBlazor\Client\AntBlazor.Client.csproj", "{64B0B5BC-7BC3-4419-9105-61918228F1C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntBlazor.Client", "AntBlazor\Client\AntBlazor.Client.csproj", "{64B0B5BC-7BC3-4419-9105-61918228F1C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntBlazor.Shared", "AntBlazor\Shared\AntBlazor.Shared.csproj", "{C72295B7-BCBF-4229-9518-1BFC9F469548}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntBlazor.Shared", "AntBlazor\Shared\AntBlazor.Shared.csproj", "{C72295B7-BCBF-4229-9518-1BFC9F469548}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

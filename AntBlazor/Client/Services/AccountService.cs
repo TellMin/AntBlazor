@@ -1,24 +1,24 @@
 ﻿using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
-using AntBlazor.Client.Interfaces.Fetchers;
+using AntBlazor.Client.Interfaces.Services;
 using AntBlazor.Client.Providers;
 using AntBlazor.Shared.DTO;
 
-namespace AntBlazor.Client.Fetchers
+namespace AntBlazor.Client.Services
 {
-    public class CurrentUserFetcher : ICurrentUserFetcher
+    public class AccountService : IAccountService
     {
         private readonly HttpClient _httpClient;
 
-        public CurrentUserFetcher(HttpClientProvider httpClientProvider)
+        public AccountService(HttpClientProvider httpClientProvider)
         {
             _httpClient = httpClientProvider.Client;
         }
 
         public async Task<bool> Login(LoginDto login)
         {
-            var response = await _httpClient.PostAsJsonAsync<LoginDto>("Api/auth/Login", login);
+            var response = await _httpClient.PostAsJsonAsync("Api/auth/Login", login);
             return response.IsSuccessStatusCode;
         }
 

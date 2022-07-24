@@ -1,6 +1,8 @@
 ﻿@page "/fetchdata"
-@using AntBlazor.Shared
-@inject HttpClient Http
+@using AntBlazor.Shared.DTO
+@using AntBlazor.Client.Interfaces.Services;
+@inject IWeatherForecastService _WeatherForecastService;
+@attribute [AllowAnonymous]
 
 <PageTitle>Weather forecast</PageTitle>
 
@@ -42,6 +44,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        //forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+        forecasts = await _WeatherForecastService.GetWeatherForecasts();
     }
 }

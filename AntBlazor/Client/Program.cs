@@ -1,8 +1,8 @@
 using AntBlazor.Client;
-using AntBlazor.Client.Fetchers;
 using AntBlazor.Client.Handler;
-using AntBlazor.Client.Interfaces.Fetchers;
+using AntBlazor.Client.Interfaces.Services;
 using AntBlazor.Client.Providers;
+using AntBlazor.Client.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -22,7 +22,8 @@ builder.Services.AddScoped<AuthenticationStateProvider>(s => s.GetRequiredServic
 builder.Services.AddScoped<HttpClientProvider>();
 
 builder.Services.AddTransient<AddXMLHttpRequestHandler>();
-builder.Services.AddScoped<ICurrentUserFetcher, CurrentUserFetcher>();
+builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
 
 
 builder.Services.AddAntDesign();

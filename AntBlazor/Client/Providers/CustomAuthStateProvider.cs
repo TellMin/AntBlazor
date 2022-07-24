@@ -1,17 +1,17 @@
 ﻿using System.Security.Claims;
 using Microsoft.AspNetCore.Components.Authorization;
 using AntBlazor.Shared.DTO;
-using AntBlazor.Client.Interfaces.Fetchers;
+using AntBlazor.Client.Interfaces.Services;
 
 namespace AntBlazor.Client.Providers
 {
     public class CustomAuthStateProvider: AuthenticationStateProvider
     {
-        private readonly ICurrentUserFetcher _currentUserFetcher;
+        private readonly IAccountService _AccountService;
 
-        public CustomAuthStateProvider(ICurrentUserFetcher currentUserFetcher)
+        public CustomAuthStateProvider(IAccountService accountService)
         {
-            _currentUserFetcher = currentUserFetcher;
+            _AccountService = accountService;
         }
 
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
@@ -33,6 +33,6 @@ namespace AntBlazor.Client.Providers
             return new AuthenticationState(new ClaimsPrincipal(identity));
         }
 
-        private async Task<CurrentUser> GetCurrentUser() => await _currentUserFetcher.CurrentUserInfo();
+        private async Task<CurrentUser> GetCurrentUser() => await _AccountService.CurrentUserInfo();
     }
 }
