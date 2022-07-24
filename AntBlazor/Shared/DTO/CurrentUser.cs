@@ -10,6 +10,6 @@ namespace AntBlazor.Shared.DTO
     {
         public bool IsAuthenticated { get; set; }
         public string UserName { get; set; } = string.Empty;
-        public Dictionary<string, string> UserRoles { get; set; } = new Dictionary<string, string>();
+        public Dictionary<string, string>? UserRoles { get; set; }
     }
 }

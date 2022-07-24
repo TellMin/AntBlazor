@@ -24,7 +24,7 @@ builder.Services.AddScoped<HttpClientProvider>();
 builder.Services.AddTransient<AddXMLHttpRequestHandler>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
-
+builder.Services.AddScoped<IItemService, ItemService>();
 
 builder.Services.AddAntDesign();
 
