@@ -19,13 +19,13 @@ namespace AntBlazor.Server.Controllers
 
         private static readonly string[] ItemStatuses = new[]
         {
-        "Orderd", "Out of Stock", "laughing", "angry", "happy", "Completed", "hopping", "kidding", "Depressed", "waiting for pick"
+        "Orderd", "Out of Stock", "Laughing", "Angry", "Happy", "Completed", "Hopping", "Kidding", "Depressed", "Waiting for pick"
         };
 
         [HttpGet]
         public IEnumerable<ItemDto> GetItem()
         {
-            return Enumerable.Range(1, 50).Select(index => new ItemDto
+            return Enumerable.Range(1, 1000).Select(index => new ItemDto
             {
                 Id = index,
                 Name = Names[Random.Shared.Next(Names.Length)],
